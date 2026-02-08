@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Сброс и базовые стили */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
@@ -24,9 +24,9 @@ body {
     flex-direction: column;
 }
 
-/* Typography */
+/* Типография */
 h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 15px;
@@ -73,7 +73,7 @@ p {
     border-bottom: 1px solid #e2e8f0;
 }
 
-/* Header */
+/* Шапка */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -92,7 +92,7 @@ header {
     margin-top: 10px;
 }
 
-/* Main Content */
+/* Основной контент */
 main {
     flex: 1;
 }
@@ -108,7 +108,7 @@ main {
     opacity: 1;
 }
 
-/* Vocabulary Screen */
+/* Экран с лексикой */
 .categories-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -138,7 +138,7 @@ main {
 
 .words-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 12px;
     margin-top: 15px;
 }
@@ -147,13 +147,16 @@ main {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
-    padding: 12px 8px;
+    padding: 15px 8px;
     text-align: center;
     font-weight: 500;
     color: #4a5568;
     transition: all 0.2s ease;
     cursor: default;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .word-card:hover {
@@ -162,7 +165,14 @@ main {
     transform: scale(1.03);
 }
 
-/* Buttons */
+.word-card .translation {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Кнопки */
 .actions {
     display: flex;
     flex-direction: column;
@@ -181,7 +191,7 @@ main {
     padding: 15px 25px;
     border: none;
     border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -230,7 +240,7 @@ main {
     box-shadow: none !important;
 }
 
-/* Quiz Screen */
+/* Экран теста */
 .quiz-header {
     display: flex;
     justify-content: space-between;
@@ -336,7 +346,7 @@ main {
     justify-content: center;
 }
 
-/* Results Screen */
+/* Экран результатов */
 #results-content {
     display: flex;
     flex-direction: column;
@@ -399,7 +409,7 @@ main {
     color: #2196F3;
 }
 
-/* Footer */
+/* Подвал */
 footer {
     margin-top: 40px;
     padding-top: 20px;
@@ -422,7 +432,7 @@ footer {
     gap: 10px;
 }
 
-/* Animations */
+/* Анимации */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -438,7 +448,7 @@ footer {
     animation: pulse 0.5s ease;
 }
 
-/* Responsive adjustments */
+/* Адаптивность */
 @media (max-width: 576px) {
     .container {
         padding: 15px;
@@ -454,6 +464,10 @@ footer {
     
     .category {
         padding: 15px;
+    }
+    
+    .words-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
     
     .btn-primary, .btn-secondary {
