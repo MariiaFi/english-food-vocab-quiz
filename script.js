@@ -1,4 +1,4 @@
-// Vocabulary Data
+// Данные лексики
 const vocabulary = {
     basicFoods: ['bread', 'rice', 'pasta', 'cheese', 'egg', 'meat', 'fish', 'soup'],
     fruits: ['apple', 'banana', 'orange', 'strawberry', 'grape', 'watermelon', 'pineapple'],
@@ -6,212 +6,192 @@ const vocabulary = {
     sweetsDrinks: ['cake', 'chocolate', 'ice cream', 'juice', 'coffee', 'tea', 'water']
 };
 
-// Quiz Questions Data
+// Вопросы для теста
 const quizQuestions = [
-    // Category 1: Choose the right word
+    // Категория 1: Выбери правильный перевод
     {
-        question: "Which word means a sweet baked dessert?",
-        options: ["apple", "cake", "rice", "meat"],
-        correctIndex: 1,
-        type: "choose"
-    },
-    {
-        question: "What do you drink in the morning to wake up?",
-        options: ["juice", "water", "coffee", "soup"],
-        correctIndex: 2,
-        type: "choose"
-    },
-    {
-        question: "Which food is yellow and curved?",
-        options: ["carrot", "banana", "tomato", "cheese"],
-        correctIndex: 1,
-        type: "choose"
-    },
-    {
-        question: "Which word is a type of meat from the sea?",
-        options: ["chicken", "fish", "egg", "bread"],
-        correctIndex: 1,
-        type: "choose"
-    },
-    {
-        question: "What do you make sandwiches with?",
-        options: ["rice", "pasta", "bread", "potato"],
-        correctIndex: 2,
-        type: "choose"
-    },
-    {
-        question: "Which is a hot liquid food?",
-        options: ["ice cream", "soup", "cheese", "cake"],
-        correctIndex: 1,
-        type: "choose"
-    },
-    {
-        question: "What is a small, red fruit often eaten in summer?",
-        options: ["apple", "orange", "strawberry", "grape"],
-        correctIndex: 2,
-        type: "choose"
-    },
-    {
-        question: "Which food comes from a cow and is used on pizza?",
-        options: ["meat", "egg", "cheese", "fish"],
-        correctIndex: 2,
-        type: "choose"
-    },
-    
-    // Category 2: What doesn't belong
-    {
-        question: "Which word does NOT belong with the others?",
-        options: ["apple", "banana", "orange", "carrot"],
-        correctIndex: 3,
-        type: "category"
-    },
-    {
-        question: "Which is NOT a drink?",
-        options: ["juice", "coffee", "tea", "chocolate"],
-        correctIndex: 3,
-        type: "category"
-    },
-    {
-        question: "Which is NOT a vegetable?",
-        options: ["tomato", "potato", "broccoli", "watermelon"],
-        correctIndex: 3,
-        type: "category"
-    },
-    {
-        question: "Which is NOT sweet?",
-        options: ["cake", "chocolate", "ice cream", "rice"],
-        correctIndex: 3,
-        type: "category"
-    },
-    {
-        question: "Which is NOT typically eaten for breakfast?",
-        options: ["bread", "egg", "coffee", "soup"],
-        correctIndex: 3,
-        type: "category"
-    },
-    {
-        question: "Which is NOT a fruit?",
-        options: ["grape", "pineapple", "strawberry", "mushroom"],
-        correctIndex: 3,
-        type: "category"
-    },
-    
-    // Category 3: Word in context
-    {
-        question: "I'm thirsty. I want some ______.",
-        options: ["bread", "water", "meat", "cheese"],
-        correctIndex: 1,
-        type: "context"
-    },
-    {
-        question: "For dinner, we had ______ with vegetables.",
-        options: ["juice", "chocolate", "fish", "ice cream"],
-        correctIndex: 2,
-        type: "context"
-    },
-    {
-        question: "My favorite fruit is ______. It's red and crunchy.",
-        options: ["banana", "orange", "apple", "grape"],
-        correctIndex: 2,
-        type: "context"
-    },
-    {
-        question: "It's hot outside. Let's have some ______.",
-        options: ["soup", "coffee", "ice cream", "rice"],
-        correctIndex: 2,
-        type: "context"
-    },
-    {
-        question: "I need energy. I'll eat a ______.",
-        options: ["water", "banana", "tea", "soup"],
-        correctIndex: 1,
-        type: "context"
-    },
-    {
-        question: "We put ______ in our salad: lettuce, tomatoes, and cucumbers.",
-        options: ["salad", "juice", "cake", "chocolate"],
+        question: "Как будет 'яблоко' на английском?",
+        options: ["apple", "orange", "banana", "grape"],
         correctIndex: 0,
-        type: "context"
+        type: "choose"
     },
     {
-        question: "I drink ______ with milk and sugar every morning.",
-        options: ["water", "coffee", "juice", "soup"],
+        question: "Как будет 'рис' на английском?",
+        options: ["bread", "pasta", "rice", "meat"],
+        correctIndex: 2,
+        type: "choose"
+    },
+    {
+        question: "Как будет 'сыр' на английском?",
+        options: ["cheese", "egg", "meat", "fish"],
+        correctIndex: 0,
+        type: "choose"
+    },
+    {
+        question: "Как будет 'вода' на английском?",
+        options: ["juice", "coffee", "tea", "water"],
+        correctIndex: 3,
+        type: "choose"
+    },
+    {
+        question: "Как будет 'хлеб' на английском?",
+        options: ["bread", "rice", "cake", "cheese"],
+        correctIndex: 0,
+        type: "choose"
+    },
+    {
+        question: "Как будет 'кофе' на английском?",
+        options: ["tea", "juice", "coffee", "water"],
+        correctIndex: 2,
+        type: "choose"
+    },
+    {
+        question: "Как будет 'мясо' на английском?",
+        options: ["fish", "egg", "meat", "cheese"],
+        correctIndex: 2,
+        type: "choose"
+    },
+    {
+        question: "Как будет 'чай' на английском?",
+        options: ["coffee", "tea", "juice", "water"],
         correctIndex: 1,
-        type: "context"
+        type: "choose"
     },
     
-    // Category 4: Category recognition
+    // Категория 2: Что это за слово?
     {
-        question: "Which of these is a vegetable?",
-        options: ["apple", "orange", "broccoli", "banana"],
-        correctIndex: 2,
-        type: "category"
-    },
-    {
-        question: "Which of these is a dairy product?",
-        options: ["bread", "cheese", "meat", "fish"],
+        question: "Apple - это что?",
+        options: ["Овощ", "Фрукт", "Напиток", "Мясо"],
         correctIndex: 1,
         type: "category"
     },
     {
-        question: "Which of these is a grain?",
-        options: ["egg", "rice", "tomato", "juice"],
+        question: "Carrot - это что?",
+        options: ["Фрукт", "Овощ", "Сладость", "Напиток"],
         correctIndex: 1,
         type: "category"
     },
     {
-        question: "Which of these is a citrus fruit?",
-        options: ["apple", "grape", "orange", "strawberry"],
+        question: "Chocolate - это что?",
+        options: ["Овощ", "Фрукт", "Сладость", "Напиток"],
         correctIndex: 2,
         type: "category"
     },
     {
-        question: "Which of these is a dessert?",
-        options: ["soup", "pasta", "cake", "salad"],
+        question: "Coffee - это что?",
+        options: ["Еда", "Фрукт", "Овощ", "Напиток"],
+        correctIndex: 3,
+        type: "category"
+    },
+    {
+        question: "Fish - это что?",
+        options: ["Овощ", "Фрукт", "Мясо/рыба", "Напиток"],
+        correctIndex: 2,
+        type: "category"
+    },
+    {
+        question: "Cake - это что?",
+        options: ["Основная еда", "Овощ", "Сладость", "Напиток"],
         correctIndex: 2,
         type: "category"
     },
     
-    // Category 5: Everyday situations
+    // Категория 3: Выбери лишнее
     {
-        question: "What do you eat on your birthday?",
-        options: ["soup", "cake", "rice", "salad"],
-        correctIndex: 1,
-        type: "situation"
-    },
-    {
-        question: "What do you make from potatoes?",
-        options: ["juice", "bread", "fries", "cheese"],
+        question: "Какое слово лишнее?",
+        options: ["apple", "banana", "carrot", "orange"],
         correctIndex: 2,
-        type: "situation"
+        type: "category"
     },
     {
-        question: "What do you put in a sandwich?",
-        options: ["cheese", "coffee", "soup", "juice"],
+        question: "Какое слово лишнее?",
+        options: ["coffee", "tea", "juice", "cheese"],
+        correctIndex: 3,
+        type: "category"
+    },
+    {
+        question: "Какое слово лишнее?",
+        options: ["bread", "rice", "pasta", "watermelon"],
+        correctIndex: 3,
+        type: "category"
+    },
+    {
+        question: "Какое слово лишнее?",
+        options: ["carrot", "tomato", "potato", "chocolate"],
+        correctIndex: 3,
+        type: "category"
+    },
+    {
+        question: "Какое слово лишнее?",
+        options: ["cake", "ice cream", "chocolate", "meat"],
+        correctIndex: 3,
+        type: "category"
+    },
+    
+    // Категория 4: Простые ситуации
+    {
+        question: "Что ты ешь на завтрак? (What do you eat for breakfast?)",
+        options: ["bread", "soup", "cake", "ice cream"],
         correctIndex: 0,
         type: "situation"
     },
     {
-        question: "What do you drink when you're sick?",
-        options: ["ice cream", "chocolate", "tea", "cake"],
-        correctIndex: 2,
-        type: "situation"
-    },
-    {
-        question: "What is in a fruit salad?",
-        options: ["apples and bananas", "carrots and potatoes", "meat and fish", "bread and cheese"],
+        question: "Что ты пьёшь утром? (What do you drink in the morning?)",
+        options: ["coffee", "soup", "ice cream", "meat"],
         correctIndex: 0,
         type: "situation"
     },
     {
-        question: "What do you eat with pasta?",
-        options: ["tomato sauce", "chocolate", "juice", "cake"],
+        question: "Что сладкое? (What is sweet?)",
+        options: ["chocolate", "rice", "meat", "fish"],
+        correctIndex: 0,
+        type: "situation"
+    },
+    {
+        question: "Что растёт на дереве? (What grows on a tree?)",
+        options: ["apple", "carrot", "potato", "rice"],
+        correctIndex: 0,
+        type: "situation"
+    },
+    {
+        question: "Что ты ешь в салате? (What do you eat in a salad?)",
+        options: ["tomato", "chocolate", "cake", "coffee"],
+        correctIndex: 0,
+        type: "situation"
+    },
+    {
+        question: "Что холодное и сладкое? (What is cold and sweet?)",
+        options: ["ice cream", "soup", "rice", "bread"],
+        correctIndex: 0,
+        type: "situation"
+    },
+    {
+        question: "Что из этого фрукт? (Which of these is a fruit?)",
+        options: ["banana", "carrot", "potato", "bread"],
+        correctIndex: 0,
+        type: "situation"
+    },
+    {
+        question: "Что из этого овощ? (Which of these is a vegetable?)",
+        options: ["potato", "apple", "banana", "orange"],
+        correctIndex: 0,
+        type: "situation"
+    },
+    {
+        question: "Что ты можешь пить? (What can you drink?)",
+        options: ["water", "bread", "meat", "cheese"],
+        correctIndex: 0,
+        type: "situation"
+    },
+    {
+        question: "Что делают из молока? (What is made from milk?)",
+        options: ["cheese", "meat", "fish", "bread"],
         correctIndex: 0,
         type: "situation"
     }
 ];
 
-// Game State
+// Состояние игры
 const gameState = {
     currentScreen: 'vocabulary',
     currentQuestionIndex: 0,
@@ -220,7 +200,7 @@ const gameState = {
     quizStarted: false
 };
 
-// DOM Elements
+// DOM элементы
 const screens = {
     vocabulary: document.getElementById('vocabulary-screen'),
     quiz: document.getElementById('quiz-screen'),
@@ -243,33 +223,32 @@ const percentageDisplay = document.getElementById('percentage');
 const circleScoreText = document.getElementById('circle-score-text');
 const scoreCircle = document.getElementById('score-circle');
 
-// Initialize the game
+// Инициализация игры
 function initGame() {
-    // Set up event listeners
+    // Настройка обработчиков событий
     startQuizBtn.addEventListener('click', startQuiz);
     nextQuestionBtn.addEventListener('click', showNextQuestion);
     restartQuizBtn.addEventListener('click', restartQuiz);
     backToVocabBtn.addEventListener('click', showVocabularyScreen);
     
-    // Show initial screen
+    // Показать начальный экран
     showScreen('vocabulary');
     
-    // Populate vocabulary display (already done in HTML)
-    console.log("Food Vocabulary Quiz initialized!");
+    console.log("Игра 'Английские слова: Еда' инициализирована!");
 }
 
-// Show a specific screen
+// Показать определённый экран
 function showScreen(screenName) {
-    // Hide all screens
+    // Скрыть все экраны
     Object.values(screens).forEach(screen => {
         screen.classList.remove('active');
     });
     
-    // Show the requested screen
+    // Показать запрошенный экран
     screens[screenName].classList.add('active');
     gameState.currentScreen = screenName;
     
-    // Update UI based on screen
+    // Обновить UI в зависимости от экрана
     if (screenName === 'quiz') {
         updateQuizUI();
     } else if (screenName === 'results') {
@@ -277,27 +256,27 @@ function showScreen(screenName) {
     }
 }
 
-// Start the quiz
+// Начать тест
 function startQuiz() {
-    // Reset game state
+    // Сбросить состояние игры
     gameState.currentQuestionIndex = 0;
     gameState.score = 0;
     gameState.userAnswers = [];
     gameState.quizStarted = true;
     
-    // Update UI
+    // Обновить UI
     scoreDisplay.textContent = '0';
     currentQuestionDisplay.textContent = '1';
     progressFill.style.width = '0%';
     
-    // Show quiz screen
+    // Показать экран теста
     showScreen('quiz');
     
-    // Display first question
+    // Показать первый вопрос
     displayQuestion();
 }
 
-// Display current question
+// Показать текущий вопрос
 function displayQuestion() {
     if (gameState.currentQuestionIndex >= quizQuestions.length) {
         showScreen('results');
@@ -306,13 +285,13 @@ function displayQuestion() {
     
     const question = quizQuestions[gameState.currentQuestionIndex];
     
-    // Update question text
+    // Обновить текст вопроса
     questionText.textContent = question.question;
     
-    // Clear options container
+    // Очистить контейнер вариантов
     optionsContainer.innerHTML = '';
     
-    // Create option buttons
+    // Создать кнопки вариантов
     question.options.forEach((option, index) => {
         const button = document.createElement('button');
         button.className = 'option-btn';
@@ -324,34 +303,34 @@ function displayQuestion() {
         optionsContainer.appendChild(button);
     });
     
-    // Update progress
+    // Обновить прогресс
     currentQuestionDisplay.textContent = gameState.currentQuestionIndex + 1;
     const progressPercent = (gameState.currentQuestionIndex / quizQuestions.length) * 100;
     progressFill.style.width = `${progressPercent}%`;
     
-    // Disable next button until answer is selected
+    // Отключить кнопку "Следующий" пока не выбран ответ
     nextQuestionBtn.disabled = true;
 }
 
-// Handle answer selection
+// Обработать выбор ответа
 function selectAnswer(selectedIndex) {
     const question = quizQuestions[gameState.currentQuestionIndex];
     const buttons = document.querySelectorAll('.option-btn');
     const selectedButton = buttons[selectedIndex];
     const correctButton = buttons[question.correctIndex];
     
-    // Disable all buttons
+    // Отключить все кнопки
     buttons.forEach(button => {
         button.disabled = true;
     });
     
-    // Mark correct/wrong answers
+    // Показать правильные/неправильные ответы
     if (selectedIndex === question.correctIndex) {
         selectedButton.classList.add('correct');
         gameState.score++;
         scoreDisplay.textContent = gameState.score;
         
-        // Add pulse animation to score
+        // Добавить анимацию пульсации к счёту
         scoreDisplay.parentElement.classList.add('pulse');
         setTimeout(() => {
             scoreDisplay.parentElement.classList.remove('pulse');
@@ -361,18 +340,18 @@ function selectAnswer(selectedIndex) {
         correctButton.classList.add('correct');
     }
     
-    // Store user answer
+    // Сохранить ответ пользователя
     gameState.userAnswers.push({
         questionIndex: gameState.currentQuestionIndex,
         selectedIndex: selectedIndex,
         isCorrect: selectedIndex === question.correctIndex
     });
     
-    // Enable next button
+    // Включить кнопку "Следующий"
     nextQuestionBtn.disabled = false;
 }
 
-// Show next question
+// Показать следующий вопрос
 function showNextQuestion() {
     gameState.currentQuestionIndex++;
     
@@ -383,57 +362,57 @@ function showNextQuestion() {
     }
 }
 
-// Show results screen
+// Показать экран результатов
 function showResults() {
-    // Calculate final stats
+    // Рассчитать итоговую статистику
     const totalQuestions = quizQuestions.length;
     const correctCount = gameState.score;
     const incorrectCount = totalQuestions - correctCount;
     const percentage = Math.round((correctCount / totalQuestions) * 100);
     
-    // Update results UI
+    // Обновить UI результатов
     correctCountDisplay.textContent = correctCount;
     incorrectCountDisplay.textContent = incorrectCount;
     percentageDisplay.textContent = percentage;
     circleScoreText.textContent = correctCount;
     
-    // Animate the score circle
+    // Анимировать круг с результатом
     const circleCircumference = 2 * Math.PI * 54; // r = 54
     const offset = circleCircumference - (correctCount / totalQuestions) * circleCircumference;
     scoreCircle.style.strokeDashoffset = offset;
     
-    // Set final progress bar
+    // Установить конечное состояние прогресс-бара
     progressFill.style.width = '100%';
     
-    // Show appropriate message based on score
+    // Показать соответствующее сообщение в зависимости от результата
     let message = '';
     if (percentage >= 90) {
-        message = "Excellent! You're a food vocabulary expert!";
+        message = "Отлично! Вы отлично знаете слова по теме 'Еда'!";
     } else if (percentage >= 70) {
-        message = "Great job! You know your food words well.";
+        message = "Хорошая работа! Вы хорошо знаете слова о еде.";
     } else if (percentage >= 50) {
-        message = "Good effort! Keep practicing to improve.";
+        message = "Неплохо! Продолжайте практиковаться, чтобы улучшить результат.";
     } else {
-        message = "Keep learning! Review the vocabulary and try again.";
+        message = "Продолжайте учить слова! Повторите лексику и попробуйте ещё раз.";
     }
     
     resultsMessage.textContent = message;
 }
 
-// Restart the quiz
+// Начать тест заново
 function restartQuiz() {
     startQuiz();
 }
 
-// Show vocabulary screen
+// Показать экран с лексикой
 function showVocabularyScreen() {
     showScreen('vocabulary');
 }
 
-// Update quiz UI elements
+// Обновить элементы UI теста
 function updateQuizUI() {
-    // Nothing needed here for now
+    // Пока ничего не нужно
 }
 
-// Initialize the game when DOM is loaded
+// Инициализировать игру при загрузке DOM
 document.addEventListener('DOMContentLoaded', initGame);
