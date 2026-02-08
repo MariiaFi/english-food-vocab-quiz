@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Vocabulary Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-apple-alt"></i> Food Vocabulary Quiz</h1>
+            <p class="subtitle">Learn English food words, then test your knowledge!</p>
+            <div class="level-badge">A1-A2 Level</div>
+        </header>
+
+        <main>
+            <!-- Vocabulary Screen -->
+            <div id="vocabulary-screen" class="screen active">
+                <h2><i class="fas fa-book-open"></i> Learn Food Words</h2>
+                <p class="screen-description">Study these food words. When you're ready, take the quiz!</p>
+                
+                <div class="categories-container">
+                    <div class="category">
+                        <h3><i class="fas fa-bread-slice"></i> Basic Foods</h3>
+                        <div class="words-grid">
+                            <div class="word-card">bread</div>
+                            <div class="word-card">rice</div>
+                            <div class="word-card">pasta</div>
+                            <div class="word-card">cheese</div>
+                            <div class="word-card">egg</div>
+                            <div class="word-card">meat</div>
+                            <div class="word-card">fish</div>
+                            <div class="word-card">soup</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <h3><i class="fas fa-lemon"></i> Fruits</h3>
+                        <div class="words-grid">
+                            <div class="word-card">apple</div>
+                            <div class="word-card">banana</div>
+                            <div class="word-card">orange</div>
+                            <div class="word-card">strawberry</div>
+                            <div class="word-card">grape</div>
+                            <div class="word-card">watermelon</div>
+                            <div class="word-card">pineapple</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <h3><i class="fas fa-carrot"></i> Vegetables</h3>
+                        <div class="words-grid">
+                            <div class="word-card">carrot</div>
+                            <div class="word-card">tomato</div>
+                            <div class="word-card">potato</div>
+                            <div class="word-card">onion</div>
+                            <div class="word-card">salad</div>
+                            <div class="word-card">broccoli</div>
+                            <div class="word-card">mushroom</div>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <h3><i class="fas fa-ice-cream"></i> Sweets & Drinks</h3>
+                        <div class="words-grid">
+                            <div class="word-card">cake</div>
+                            <div class="word-card">chocolate</div>
+                            <div class="word-card">ice cream</div>
+                            <div class="word-card">juice</div>
+                            <div class="word-card">coffee</div>
+                            <div class="word-card">tea</div>
+                            <div class="word-card">water</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button id="start-quiz-btn" class="btn-primary">
+                        <i class="fas fa-play-circle"></i> Start Quiz
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="score-display">
+                        <i class="fas fa-star"></i> Score: <span id="score">0</span>/30
+                    </div>
+                    <div class="progress-display">
+                        <i class="fas fa-list-ol"></i> Question <span id="current-question">1</span>/30
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                
+                <div id="question-container">
+                    <h2 id="question-text"></h2>
+                    
+                    <div id="options-container" class="options-container">
+                        <!-- Options will be generated here by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="quiz-controls">
+                    <button id="next-question-btn" class="btn-secondary" disabled>
+                        <i class="fas fa-arrow-right"></i> Next Question
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="screen">
+                <h2><i class="fas fa-medal"></i> Quiz Complete!</h2>
+                
+                <div id="results-content">
+                    <div class="score-circle">
+                        <svg width="120" height="120" viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e0e0e0" stroke-width="12"></circle>
+                            <circle id="score-circle" cx="60" cy="60" r="54" fill="none" stroke="#4CAF50" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" stroke-dashoffset="339.292"></circle>
+                            <text x="60" y="65" text-anchor="middle" font-size="24" font-weight="bold" fill="#333" id="circle-score-text">0</text>
+                        </svg>
+                        <div class="score-label">Your Score</div>
+                    </div>
+                    
+                    <div id="results-message"></div>
+                    
+                    <div class="results-details">
+                        <p><i class="fas fa-check-circle"></i> Correct: <span id="correct-count">0</span></p>
+                        <p><i class="fas fa-times-circle"></i> Incorrect: <span id="incorrect-count">0</span></p>
+                        <p><i class="fas fa-percentage"></i> Percentage: <span id="percentage">0</span>%</p>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button id="restart-quiz-btn" class="btn-primary">
+                        <i class="fas fa-redo"></i> Play Again
+                    </button>
+                    <button id="back-to-vocab-btn" class="btn-secondary">
+                        <i class="fas fa-book"></i> Back to Vocabulary
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Designed for English learners (A1-A2 level). All words are food-related.</p>
+            <p class="hint"><i class="fas fa-lightbulb"></i> Tip: Study the vocabulary first, then take the quiz!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
